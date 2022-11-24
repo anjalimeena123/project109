@@ -26,7 +26,10 @@ fig.show()
 listofdatasd1=[result for result in data if result > first_std_deviation_start and result < first_std_deviation_end]
 listofdatasd2=[result for result in data if result > second_std_deviation_start and result < second_std_deviation_end]
 listofdatasd3=[result for result in data if result > third_std_deviation_start and result < third_std_deviation_end]
-print("Mean of this value is=".mean)
-print("Mode of this value is=".mode)
-print("Median of this value is=".median)
-print("std_Deviation of this value is=".std_Deviation)
+print("Mean of this value is={}".format(mean))
+print("Mode of this value is={}".format(median))
+print("Median of this value is={}".format(mode))
+print("std_Deviation of this value is={}".format(std_deviation))
+print("{}% of data lies within 1 standard deviation".format(len(listofdatasd1)*100.0/len(data)))
+print("{}% of data lies within 2 standard deviation".format(len(listofdatasd2)*100.0/len(data)))
+print("{}% of data lies within 3 standard deviation".format(len(listofdatasd3)*100.0/len(data)))
